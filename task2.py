@@ -1,24 +1,18 @@
 #!python3
-
 """
-Create a function called sentence() that takes 3 input paremters:
-greeting: string that will contain a salutation, examples: Hello, Hiya, Ola
-name: a string that will contain a person's name.  This should have a default value of "Benjamin"
-question: a string that will contain a full question to ask the person.  It should have a default value of "How are you"
-Have the greeting, name and question combine together into a string. 
-Note: You are not using a print statement, so you may
-use the concatenate (+) operator. Make sure your spacing is appropriate.
-However, you can still use formatted strings using:
-f"{variable} contents"
+Create a function called multiplication that takes 2 input paremeters:
+number: integer.  
+end: integer. It should have a default value of 12.
+The function will create a list that stores the multiplication tables for the number, and ends at end.
 return value:
-string. The output sentence
+list.  The multiplication tables starting at a multiple of 1 and ending at whatever the default value is.
 example assertion:
-assert sentence("Hello") == "Hello Benjamin. How are you"
-assert sentence("Hiya","Casey","Have you enjoyed your meal") == "Hiya Casey. Have you enjoyed your meal"
-(2 points) 
+assert multiplication(5) == [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+assert multiplication(2,5) == [2, 4, 6, 8, 10]
 """
-def sentence(a = "Hello", b = "Benjamin", c = "How are you"):
-  return f"{a} {b}. {c}"
-if __name__ == "__main__":
-  assert sentence("Hello") == "Hello Benjamin. How are you"
-  assert sentence("Hiya","Casey","Have you enjoyed your meal") == "Hiya Casey. Have you enjoyed your meal"
+
+def multiplication (y=int, x = int(12)):
+    list1 = []
+    for i in range(1,x+1):
+        list1.append(i*y)
+    return list1
